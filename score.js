@@ -16,6 +16,7 @@ button1.addEventListener("click", function() {
 	if(score1==winningscore)
 	{
 		s1.textContent=score1;
+		s1.classList.add("winner");
 		game=false;
 	}
 	s1.textContent=score1;
@@ -28,6 +29,7 @@ button2.addEventListener("click", function() {
 	if(score2==winningscore)
 	{
 		s2.textContent=score2;
+		s2.classList.add("winner");
 		game=false
 	}
 	s2.textContent=score2;
@@ -38,6 +40,8 @@ button3.addEventListener("click", function() {
 
 	score1=0;
 	score2=0;
+	s1.classList.remove("winner");
+	s2.classList.remove("winner");
 	s1.textContent=score1;
 	s2.textContent=score2;
 	game=true;
@@ -45,6 +49,8 @@ button3.addEventListener("click", function() {
  function reset(){
  	score1=0;
 	score2=0;
+	s1.classList.remove("winner");
+	s2.classList.remove("winner");
 	s1.textContent=score1;
 	s2.textContent=score2;
 	game=true;
